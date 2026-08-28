@@ -15,6 +15,7 @@ const inputCls =
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: '', business: '', phone: '', message: '' });
+  const [sentUrl, setSentUrl] = useState(null);
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
@@ -29,7 +30,9 @@ export const Contact = () => {
       '',
       `Mesazhi: ${form.message}`,
     ].join('\n');
-    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+    setSentUrl(url);
+    window.open(url, '_blank');
   };
 
   return (
@@ -114,6 +117,25 @@ export const Contact = () => {
               <Send size={18} />
               Dërgo në WhatsApp
             </button>
+            {sentUrl && (
+              <div
+                data-testid="contact-confirmation-message"
+                className="mt-6 rounded-2xl border border-[#1FBF7A]/35 bg-[#1FBF7A]/10 px-5 py-4 text-center text-sm sm:text-base text-gray-200"
+              >
+                Mesazhi u përgatit dhe WhatsApp-i po hapet.{' '}
+                Nëse nuk u hap automatikisht,{' '}
+                <a
+                  href={sentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="contact-confirmation-fallback-link"
+                  className="text-[#1FBF7A] font-semibold underline underline-offset-4"
+                >
+                  kliko këtu për ta hapur
+                </a>
+                .
+              </div>
+            )}
           </form>
         </Reveal>
       </div>

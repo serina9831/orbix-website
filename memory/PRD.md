@@ -26,6 +26,9 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Palet e sfondit të përditësuara (Qershor 2026): body/primary #1A1D1E → #1E2225, seksionet dytësore #212527 → #24282B, kartat #2A2E31/#282C2F (më të çelëta për thellësi); përditësuar edhe theme-color e favicon.svg
 - Fix Vercel build (Qershor 2026): shtuar "ajv": "^8.12.0" në package.json (mismatch ajv-keywords/ajv me react-scripts); yarn build kalon me sukses (exit 0); verifikuar nga testing_agent 10/10; fix mobile overflow me overflow-x: clip në html
 - Butoni Hero: "Shiko Demoin" → "Shiko Demon" (Qershor 2026)
+- Domain final Vercel (Qershor 2026): https://orbix-website-eta.vercel.app — og:image/og:url, canonical, twitter:image, sitemap.xml, robots.txt, JSON-LD të gjitha të përditësuara me këtë domain
+- FAQ schema (Qershor 2026): JSON-LD FAQPage me 5 pyetjet në index.html për rich results në Google
+- Konfirmim pas dërgimit (Qershor 2026): Contact.jsx shfaq mesazh konfirmimi + link fallback wa.me nëse shfletuesi bllokon window.open
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)

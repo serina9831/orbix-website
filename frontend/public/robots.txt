@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ai-biznes-al.preview.emergentagent.com/sitemap.xml
+Sitemap: https://orbix-website-eta.vercel.app/sitemap.xml
