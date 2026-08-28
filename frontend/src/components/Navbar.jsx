@@ -37,7 +37,7 @@ export const Navbar = () => {
           className="font-display text-xl font-extrabold tracking-[0.2em] text-white"
           data-testid="nav-brand-logo"
         >
-          ORBI<span className="text-[#1FBF7A]">X</span>
+          ORBI<span className="text-gradient-emerald">X</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

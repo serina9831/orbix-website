@@ -39,11 +39,18 @@ body {
 }
 
 .text-gradient-emerald {
-  background: linear-gradient(120deg, #1FBF7A 0%, #A3F3D1 55%, #FFFFFF 100%);
+  background-image: linear-gradient(120deg, #10B981 0%, #14B8A6 45%, #7DF0D4 75%, #FFFFFF 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #10B981;
+  paint-order: stroke;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .text-gradient-emerald {
+    color: transparent;
+  }
 }
 
 .btn-glow {

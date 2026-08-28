@@ -10,7 +10,7 @@ export const Footer = () => (
   <footer className="border-t border-white/5 bg-[#1A1D1E] py-14" data-testid="footer">
     <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
       <span className="font-display text-2xl font-extrabold tracking-[0.25em] text-white" data-testid="footer-logo">
-        ORBI<span className="text-[#1FBF7A]">X</span>
+        ORBI<span className="text-gradient-emerald">X</span>
       </span>
 
       <div className="flex items-center gap-7">

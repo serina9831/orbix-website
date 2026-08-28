@@ -15,6 +15,7 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Albanian copy throughout, exact section order from brief
 - Anthracite (#1A1D1E–#2B2F31) + emerald (#0F9D6E–#1FBF7A), no gold/black
 - Syne display font w/ emerald gradient headlines, Plus Jakarta Sans body
+- Gradient teksti i përditësuar (Qershor 2026): emerald→teal→white (#10B981 → #14B8A6 → #7DF0D4 → #FFF) me background-clip: text + fallback @supports (color: #10B981 për browsera të vjetër); aplikuar edhe te "X" e logos në Navbar/Footer
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)
