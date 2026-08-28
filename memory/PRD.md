@@ -28,7 +28,7 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Verified: desktop + mobile (390px) screenshots, all data-testids present, form → WhatsApp popup flow
 
 ## Backlog / Next Tasks
-- P0: User uploads real demo video as `frontend/public/demo-video.mp4` (player activates automatically)
+- P0: ✅ DONE — Real demo video (173s, "AI AGENT Demo - ORBIX AGENCY") uploaded to `frontend/public/demo-video.mp4`, auto-activated in player
 - P1: Replace email placeholder info@orbix.al with real address
 - P1: Custom domain + OG/social share meta image for link previews in WhatsApp outreach
 - P2: Meta/TikTok pixel for outreach retargeting
