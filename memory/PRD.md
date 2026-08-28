@@ -19,6 +19,9 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Shimmer i lehtë mbi gradientin e titujve (Qershor 2026): animacion 7s ease-in-out i background-position, respekton prefers-reduced-motion
 - OG meta tags (Qershor 2026): og:title/description/image + Twitter card në public/index.html; imazhi /public/og-image.jpg (1200x630, 47KB); URL absolute = preview URL — DUHET PËRDITËSUAR nëse lidhet domain i ri
 - Numëruesi live dhe fotot reale të nisheve: SHTYRË me vendim të userit (s'ka klientë realë ende; kundër mesazhit "Demo Reale, Jo Premtime")
+- Favicon (Qershor 2026): favicon.svg me "X" gradient smerald + favicon-32.png/favicon.ico/apple-touch-icon.png, të lidhura në index.html
+- Butoni WhatsApp pluskues (Qershor 2026): WhatsAppFloat.jsx — shfaqet pas 500px scroll, wa.me/355696738308 me mesazh të paraplotësuar
+- SEO bazik (Qershor 2026): keywords shqip, canonical, sitemap.xml, robots.txt, JSON-LD Organization schema — URL-të absolute = preview URL, duhen përditësuar me domain të ri
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)
