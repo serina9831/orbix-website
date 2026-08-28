@@ -1,0 +1,302 @@
+{
+  "project_info": {
+    "brand_name": "ORBIX",
+    "tagline": "Automatizo Biznesin Tënd me Inteligjencë Artificiale",
+    "target_audience": "Small and medium businesses in Albania (Dental Clinics, Beauty Salons, Restaurants, Real Estate Agencies, Gyms, Private Schools)",
+    "primary_goal": "High-conversion pitch & portfolio piece built for immediate credibility within the first few scrolls when shared via link with business prospects.",
+    "language": "Albanian (Shqip) - Natural, confident, benefit-driven copy throughout."
+  },
+  "design_system": {
+    "theme": "Dark Modern / High-Tech Precision",
+    "color_palette": {
+      "background_primary": "#1A1D1E",
+      "background_secondary": "#212527",
+      "background_card": "#2B2F31",
+      "background_card_hover": "#34393D",
+      "accent_primary": "#0F9D6E",
+      "accent_emerald": "#1FBF7A",
+      "accent_emerald_glow": "rgba(31, 191, 122, 0.25)",
+      "gradient_heading": "linear-gradient(135deg, #1FBF7A 0%, #A3F3D1 50%, #FFFFFF 100%)",
+      "text_primary": "#F4F6F8",
+      "text_secondary": "#9CA3AF",
+      "text_muted": "#6B7280",
+      "border_subtle": "rgba(255, 255, 255, 0.08)",
+      "border_emerald": "rgba(31, 191, 122, 0.3)"
+    },
+    "typography": {
+      "font_pairing": "Syne or Clash Display or Outfit for Headings + Plus Jakarta Sans or Inter for Body",
+      "heading_font_family": "'Syne', 'Outfit', sans-serif",
+      "body_font_family": "'Plus Jakarta Sans', 'Inter', sans-serif",
+      "google_fonts_import": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap",
+      "rules": {
+        "h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none",
+        "h2": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight",
+        "h3": "text-xl sm:text-2xl font-bold tracking-tight",
+        "body": "text-base sm:text-lg leading-relaxed text-gray-300",
+        "overline": "text-xs uppercase tracking-[0.25em] font-bold text-[#1FBF7A]"
+      }
+    },
+    "spacing_and_layout": {
+      "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-20 lg:py-32",
+      "grid_gap": "gap-6 lg:gap-8",
+      "card_padding": "p-6 sm:p-8"
+    },
+    "visual_enhancers": {
+      "glassmorphism": "backdrop-blur-xl bg-[#212527]/80 border border-white/10 shadow-2xl",
+      "tracing_beam": "hover:border-[#1FBF7A]/50 transition-all duration-300 hover:shadow-[0_0_25px_rgba(31,191,122,0.2)]",
+      "glow_button": "bg-gradient-to-r from-[#0F9D6E] to-[#1FBF7A] text-white shadow-[0_0_20px_rgba(31,191,122,0.4)] hover:shadow-[0_0_35px_rgba(31,191,122,0.7)] transition-all duration-300 hover:-translate-y-0.5",
+      "noise_overlay": "radial-gradient(circle at 50% 0%, rgba(31,191,122,0.12) 0%, transparent 70%)"
+    }
+  },
+  "motion_and_animations": {
+    "smooth_scroll": "Lenis smooth scrolling integration",
+    "framer_motion_specs": {
+      "hero_headline_reveal": "Line-by-line staggered text reveal using clipPath mask or opacity y-translation",
+      "scroll_reveal": "framer-motion initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}",
+      "card_hover": "whileHover={{ y: -6, scale: 1.01 }} transition={{ duration: 0.2 }}",
+      "marquee": "Continuous slow editorial text marquee with react-fast-marquee or framer-motion linear loop"
+    }
+  },
+  "sections_breakdown": [
+    {
+      "section_id": "hero",
+      "section_name": "1. HERO",
+      "layout": "Asymmetric kinetic hero with glowing grid lines, background abstract geometric light effects, badge overline, masked headline reveal, subheadline, double CTA.",
+      "content": {
+        "badge": "LIDER I AUTOMATIZIMIT ME AI NË SHQIPËRI",
+        "headline": "ORBIX – Automatizo Biznesin Tënd me Inteligjencë Artificiale",
+        "subheadline": "Përmirëso shërbimin ndaj klientit, elimino punët manuale dhe rrit fitimet 24/7 pa rritur stafin.",
+        "primary_cta": "Kontakto për një Konsultë",
+        "secondary_cta": "Shiko Demoin Live"
+      }
+    },
+    {
+      "section_id": "editorial_marquee",
+      "section_name": "EDITORIAL MARQUEE",
+      "layout": "Full-width editorial kinetic ribbon running between Hero and Demo Video.",
+      "content": "AGJENTË AI VIRTUALË • AUTOMATIZIM WHATSAPP • REZERVIME AUTOMATIKE • CRM INTELIGJENT • INTEGRIM ME RROGA & STRUKTURA • DENTAL • SALON BEAUTY • RESTORANTE • REAL ESTATE"
+    },
+    {
+      "section_id": "demo_video",
+      "section_name": "2. REAL DEMO VIDEO",
+      "title": "Shiko si Punon një Agjent AI i Vërtetë",
+      "subtitle": "Transformimi i komunikimit me klientët në kohë reale — përgjigje në sekonda, rezervime automatike.",
+      "component_details": "Large 16:9 interactive mock video player card with glowing emerald border, playback animation controls, interactive simulated conversation overlay, and sample voice/text AI trigger controls."
+    },
+    {
+      "section_id": "services",
+      "section_name": "3. SERVICES - Çfarë Ofron ORBIX",
+      "layout": "7-card bento grid with custom emerald icons, subtle glowing hover states, and benefit-focused copy.",
+      "services_list": [
+        {
+          "id": 1,
+          "title": "Agjentë AI për WhatsApp & Instagram",
+          "description": "Përgjigje me shpejtësi rrufe ndaj pyetjeve të klientëve 24/7 në çdo kanal komunikimi.",
+          "icon": "MessageSquareCode"
+        },
+        {
+          "id": 2,
+          "title": "Sistem Automatizimi të Rezervimeve",
+          "description": "Menaxhim inteligjent i takimeve pa pasur nevojë për recepsionist gjatë gjithë ditës.",
+          "icon": "CalendarCheck"
+        },
+        {
+          "id": 3,
+          "title": "Kualifikim i Automatisur i Klientëve Potencialë",
+          "description": "Filtro automatikisht blerësit seriozë përpara se të kalojnë te ekipi yt i shitjeve.",
+          "icon": "UserCheck"
+        },
+        {
+          "id": 4,
+          "title": "Kujtesa & Njoftime Automatike në WhatsApp",
+          "description": "Ul anulimet e takimeve me deri në 80% me përkujtues automatikë miqësorë.",
+          "icon": "BellRing"
+        },
+        {
+          "id": 5,
+          "title": "Integrim CRM & Sinkronizim të Dhënash",
+          "description": "Ndërlidh të gjitha platformat tuaja ekzistuese në një panel qendror automatik.",
+          "icon": "DatabaseZap"
+        },
+        {
+          "id": 6,
+          "title": "Shërbim i Automatizuar Pas Shitjes & Feedback",
+          "description": "Mblidh vlerësime pozitive dhe ndërto besnikëri të lartë te klientët ekzistues.",
+          "icon": "Star"
+        },
+        {
+          "id": 7,
+          "title": "Analitikë Inteligjente & Raportim i Fitimit",
+          "description": "Shih saktësisht sa kohë dhe para të ka kursyer automatizimi çdo muaj.",
+          "icon": "TrendingUp"
+        }
+      ]
+    },
+    {
+      "section_id": "how_it_works",
+      "section_name": "4. HOW IT WORKS - Si Funksionon Bashkëpunimi",
+      "layout": "4-step horizontal or vertical process road with numbered indicator badges (01-04), animated connectors, and clear progress milestones.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Konsulta Fillestare Gratis",
+          "description": "Analizojmë proceset e biznesit tënd dhe identifikojmë pikat ku humbet më shumë kohë e para."
+        },
+        {
+          "step": "02",
+          "title": "Dizajnimi i Agjentit AI",
+          "description": "Krijojmë modelin e personalizuar AI të përshtatur posaçërisht për produktet ose shërbimet e tua."
+        },
+        {
+          "step": "03",
+          "title": "Integrimi i Shpejtë",
+          "description": "Lidhim sistemin AI me faqen tënde, WhatsApp-in dhe mjete ekzistuese pa asnjë ndërprerje."
+        },
+        {
+          "step": "04",
+          "title": "Optimizim & Mbështetje",
+          "description": "Monitorojmë performancën dhe optimizojmë vazhdimisht përgjigjet për konvertim maksimal."
+        }
+      ]
+    },
+    {
+      "section_id": "target_niches",
+      "section_name": "5. TARGET NICHES - Punojmë me Biznese si i Yti",
+      "layout": "Grid of 6 interactive niche cards with custom imagery/icons, category tags, and explicit pain-point solutions.",
+      "niches": [
+        {
+          "id": "dental",
+          "name": "Klinika Dentare",
+          "benefit": "Rezervim automatik i takimeve dhe përkujtues në WhatsApp për pacientët.",
+          "icon": "Stethoscope",
+          "image_url": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?crop=entropy&cs=srgb&fm=jpg&q=85"
+        },
+        {
+          "id": "beauty",
+          "name": "Salone Bukurie & SPA",
+          "benefit": "Sistem i automatizuar i orareve pa ndërprerë punën e estetiesteve.",
+          "icon": "Sparkles",
+          "image_url": "https://images.unsplash.com/photo-1560066984-138dadb4c035?crop=entropy&cs=srgb&fm=jpg&q=85"
+        },
+        {
+          "id": "restaurants",
+          "name": "Restorante & Kafene",
+          "benefit": "Menaxhim i shpejtë i rezervimeve të tavolinave dhe pyetjeve për menunë.",
+          "icon": "Utensils",
+          "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=srgb&fm=jpg&q=85"
+        },
+        {
+          "id": "realestate",
+          "name": "Agjenci Imobiliare",
+          "benefit": "Kualifikim automatik i blerësve dhe dërgim i pronave përkatëse në çast.",
+          "icon": "Home",
+          "image_url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?crop=entropy&cs=srgb&fm=jpg&q=85"
+        },
+        {
+          "id": "gyms",
+          "name": "Salla Palestre & Fitness",
+          "benefit": "Regjistrim automatik i anëtarësimeve dhe udhëzime fillestare për klientët.",
+          "icon": "Dumbbell",
+          "image_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=srgb&fm=jpg&q=85"
+        },
+        {
+          "id": "schools",
+          "name": "Shkolla Private & Qendra Kursesh",
+          "benefit": "Menaxhim i kërkesave për regjistrim dhe informacionit mbi programet mësimore.",
+          "icon": "GraduationCap",
+          "image_url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?crop=entropy&cs=srgb&fm=jpg&q=85"
+        }
+      ]
+    },
+    {
+      "section_id": "why_orbix",
+      "section_name": "6. WHY ORBIX - Pse ORBIX",
+      "layout": "4 differentiator cards highlighting local mastery, cutting-edge AI stack, ROI guarantee, and speed.",
+      "differentiators": [
+        {
+          "title": "Ekspertizë me Gjuhën Shqipe",
+          "description": "Agjentët tanë AI kuptojnë natyrshëm dialektet dhe mënyrën e komunikimit të biznesit në Shqipëri."
+        },
+        {
+          "title": "Zbatimi i Shpejtë brenda 7 Ditëve",
+          "description": "Nuk pret me muaj me radhë — sistemi yt automatik do të jetë funksional brenda një jave."
+        },
+        {
+          "title": "Përshtatje 100% Sipas Biznesit",
+          "description": "Asnjë zgjidhje shabllon — çdo automatizim ndërtohet rreth proceseve tuaja specifike."
+        },
+        {
+          "title": "Mbështetje Teknike e Përhershme",
+          "description": "Ekipi ynë është gjithmonë në gatishmëri për çdo përmirësim apo përditësim të nevojshëm."
+        }
+      ]
+    },
+    {
+      "section_id": "contact",
+      "section_name": "7. CONTACT - Gati të Automatizosh Biznesin Tënd?",
+      "headline": "Gati të Automatizosh Biznesin Tënd? Na Kontakto Tani",
+      "subtitle": "Plotëso formën më poshtë ose na shkruaj direkt në WhatsApp për përgjigje të menjëhershme.",
+      "whatsapp_number": "+355696738308",
+      "whatsapp_url": "https://wa.me/355696738308",
+      "form_fields": [
+        "Emri",
+        "Emri i Biznesit",
+        "Numri i Telefonit",
+        "Mesazhi"
+      ],
+      "form_behavior": "On submit, automatically construct pre-filled message URL (https://wa.me/355696738308?text=...) with form details and open WhatsApp in a new tab."
+    },
+    {
+      "section_id": "footer",
+      "section_name": "8. FOOTER",
+      "elements": {
+        "wordmark": "ORBIX",
+        "instagram_link": "https://instagram.com/orbix.agency",
+        "whatsapp_phone": "+355 69 673 8308",
+        "email": "info@orbix.al",
+        "copyright": "© 2026 ORBIX Agency. Të gjitha të drejtat të rezervuara."
+      }
+    }
+  ],
+  "testing_requirements": {
+    "mandatory_data_testids": [
+      "nav-brand-logo",
+      "nav-link-services",
+      "nav-link-how-it-works",
+      "nav-link-niches",
+      "nav-link-why-us",
+      "nav-cta-contact",
+      "hero-primary-cta",
+      "hero-secondary-cta",
+      "demo-video-player",
+      "service-card-1",
+      "service-card-2",
+      "service-card-3",
+      "service-card-4",
+      "service-card-5",
+      "service-card-6",
+      "service-card-7",
+      "step-card-01",
+      "step-card-02",
+      "step-card-03",
+      "step-card-04",
+      "niche-card-dental",
+      "niche-card-beauty",
+      "niche-card-restaurants",
+      "niche-card-realestate",
+      "niche-card-gyms",
+      "niche-card-schools",
+      "contact-whatsapp-direct-button",
+      "contact-form",
+      "contact-input-name",
+      "contact-input-business",
+      "contact-input-phone",
+      "contact-input-message",
+      "contact-submit-button",
+      "footer-instagram-link",
+      "footer-whatsapp-link",
+      "footer-email-link"
+    ]
+  }
+}
