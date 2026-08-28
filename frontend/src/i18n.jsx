@@ -2,6 +2,10 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 export const translations = {
   al: {
+    meta: {
+      title: 'ORBIX — Automatizo Biznesin Tënd me AI',
+      description: 'ORBIX — Agjenci automatizimi me AI. Agjentë AI që përgjigjen, rezervojnë dhe shesin për biznesin tënd, 24 orë në ditë.',
+    },
     nav: {
       links: [
         { label: 'Shërbimet', hash: '#sherbimet', testid: 'nav-link-services' },
@@ -126,6 +130,10 @@ export const translations = {
     },
   },
   en: {
+    meta: {
+      title: 'ORBIX — Automate Your Business with AI',
+      description: 'ORBIX — AI automation agency. AI agents that reply, book and sell for your business, 24 hours a day.',
+    },
     nav: {
       links: [
         { label: 'Services', hash: '#sherbimet', testid: 'nav-link-services' },
@@ -262,6 +270,9 @@ export const LangProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('orbix-lang', lang);
     document.documentElement.lang = lang === 'al' ? 'sq' : 'en';
+    document.title = translations[lang].meta.title;
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', translations[lang].meta.description);
   }, [lang]);
 
   return (

@@ -30,6 +30,7 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - FAQ schema (Qershor 2026): JSON-LD FAQPage me 5 pyetjet në index.html për rich results në Google
 - Konfirmim pas dërgimit (Qershor 2026): Contact.jsx shfaq mesazh konfirmimi + link fallback wa.me nëse shfletuesi bllokon window.open
 - Faqe dygjuhëshe AL/EN (Qershor 2026): src/i18n.jsx (LangProvider + translations + GradientHeading helper); toggle AL/EN në navbar (desktop + mobile, testids: lang-btn-al/en, lang-btn-al/en-mobile); default AL, persiston në localStorage 'orbix-lang'; të gjitha seksionet + mesazhet WhatsApp ndryshojnë gjuhë; testuar nga testing_agent 100% (iteration_2)
+- Meta dinamike sipas gjuhës (Qershor 2026): document.title + meta description ndryshojnë me toggle AL/EN (i18n.jsx useEffect); default gjithmonë shqip pa auto-detektim (vendim useri); meta tag i Search Console PRITET nga useri
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)
