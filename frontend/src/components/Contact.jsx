@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Mail } from 'lucide-react';
 import { Reveal, Chapter } from './Reveal';
 import { useLang, GradientHeading } from '../i18n';
 
@@ -52,7 +52,7 @@ export const Contact = () => {
           </p>
         </Reveal>
 
-        <Reveal delay={0.12} className="mt-10 flex justify-center">
+        <Reveal delay={0.12} className="mt-10 flex flex-wrap justify-center items-center gap-4">
           <a
             href={`https://wa.me/${WA_NUMBER}`}
             target="_blank"
@@ -62,6 +62,14 @@ export const Contact = () => {
           >
             <WhatsAppIcon size={22} />
             {t.contact.directBtn}
+          </a>
+          <a
+            href={`mailto:orbixagency.info@gmail.com?subject=${encodeURIComponent(t.contact.emailSubject)}`}
+            data-testid="contact-email-button"
+            className="inline-flex items-center gap-3 font-semibold text-gray-200 hover:text-[#1FBF7A] border border-white/10 hover:border-[#1FBF7A]/40 transition-colors duration-300 px-10 py-5 rounded-full text-base sm:text-lg"
+          >
+            <Mail size={22} />
+            {t.contact.emailBtn}
           </a>
         </Reveal>
 

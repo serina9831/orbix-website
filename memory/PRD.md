@@ -31,6 +31,8 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Konfirmim pas dërgimit (Qershor 2026): Contact.jsx shfaq mesazh konfirmimi + link fallback wa.me nëse shfletuesi bllokon window.open
 - Faqe dygjuhëshe AL/EN (Qershor 2026): src/i18n.jsx (LangProvider + translations + GradientHeading helper); toggle AL/EN në navbar (desktop + mobile, testids: lang-btn-al/en, lang-btn-al/en-mobile); default AL, persiston në localStorage 'orbix-lang'; të gjitha seksionet + mesazhet WhatsApp ndryshojnë gjuhë; testuar nga testing_agent 100% (iteration_2)
 - Meta dinamike sipas gjuhës (Qershor 2026): document.title + meta description ndryshojnë me toggle AL/EN (i18n.jsx useEffect); default gjithmonë shqip pa auto-detektim (vendim useri); meta tag i Search Console SHTUAR (Qershor 2026): google-site-verification 5qlZz1knoANXJCLsRh4ZcZcabzt4gflEbCoH-6rX00c në index.html
+- Butoni email te Kontakti (Qershor 2026): "Na shkruaj me email"/"Email Us" (mailto orbixagency.info@gmail.com me subject dygjuhësh) krah butonit WhatsApp; testid contact-email-button
+- SHTYRË me vendim useri: analitika e vizitorëve (do e bëjë vetë via Vercel) dhe seksioni i fshehur "Rezultatet" (kur të ketë klientë realë)
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)
