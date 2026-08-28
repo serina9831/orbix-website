@@ -35,12 +35,12 @@ export const Footer = () => (
           <span>+355 69 673 8308</span>
         </a>
         <a
-          href="mailto:info@orbix.al"
+          href="mailto:orbixagency.info@gmail.com"
           data-testid="footer-email-link"
           className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#1FBF7A] transition-colors duration-300"
         >
           <Mail size={18} />
-          <span className="hidden sm:inline">info@orbix.al</span>
+          <span className="hidden sm:inline">orbixagency.info@gmail.com</span>
         </a>
       </div>
 

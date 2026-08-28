@@ -5,7 +5,7 @@ import { Reveal, Chapter } from './Reveal';
 const points = [
   {
     title: 'Demo Reale, Jo Premtime',
-    desc: 'E vetmja agjenci që të tregon agjentin AI duke punuar live, para se të vendosësh — sheh me sytë e tu çfarë po blen.',
+    desc: 'E vetmja agjenci që tregon demo reale të agjentit AI, jo vetëm premtime — sheh me sytë e tu çfarë po blen.',
   },
   {
     title: 'E Personalizuar, Jo Shabllon',

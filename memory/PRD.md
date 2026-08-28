@@ -29,7 +29,7 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 
 ## Backlog / Next Tasks
 - P0: ✅ DONE — Real demo video (173s, "AI AGENT Demo - ORBIX AGENCY") uploaded to `frontend/public/demo-video.mp4`, auto-activated in player
-- P1: Replace email placeholder info@orbix.al with real address
+- P1: ✅ DONE — Email real vendosur: orbixagency.info@gmail.com në footer
 - P1: Custom domain + OG/social share meta image for link previews in WhatsApp outreach
 - P2: Meta/TikTok pixel for outreach retargeting
 - P2: Kosovar/Albanian dialect micro-copy A/B variants

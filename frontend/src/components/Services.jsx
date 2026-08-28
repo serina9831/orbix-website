@@ -24,7 +24,7 @@ const services = [
   {
     icon: UserPlus,
     title: 'Mbledhje & Kualifikim Leadesh',
-    desc: 'Çdo person i interesuar regjistrohet automatikisht me emër, numër dhe nevojë — ti merr të dhënat gati për t\'i kontaktuar, pa humbur asnjë mundësi.',
+    desc: 'Çdo person i interesuar regjistrohet automatikisht me emër, numër dhe çdo kontakt — ti merr të dhënat gati për t\'i kontaktuar, pa humbur asnjë mundësi.',
   },
   {
     icon: BellRing,

@@ -22,9 +22,6 @@ export const DemoVideo = () => {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-testid="demo-heading">
             Shiko si Punon një Agjent AI <span className="text-gradient-emerald">i Vërtetë</span>
           </h2>
-          <p className="mt-5 text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed" data-testid="demo-subtitle">
-            Ky nuk është një video promocionale — është një agjent AI real, i ndërtuar dhe testuar për një klinikë dentare, që merr rezervime dhe përgjigjet klientëve automatikisht.
-          </p>
         </Reveal>
 
         <Reveal delay={0.15} className="mt-12">
@@ -57,9 +54,6 @@ export const DemoVideo = () => {
               </div>
             )}
           </div>
-          <p className="mt-5 text-sm text-gray-500 text-center" data-testid="demo-caption">
-            Çdo biznes merr një demo të personalizuar si ky, para se të vendosë të bashkëpunojë me ne.
-          </p>
         </Reveal>
       </div>
     </section>
