@@ -99,7 +99,7 @@ export const Hero = () => {
                 data-testid="hero-secondary-cta"
                 className="flex items-center gap-2 text-sm sm:text-base text-gray-300 hover:text-[#1FBF7A] transition-colors duration-300 border border-white/10 hover:border-[#1FBF7A]/40 rounded-full px-7 py-4"
               >
-                Shiko Demoin
+                Shiko Demon
                 <ArrowDown size={16} />
               </button>
             </motion.div>
