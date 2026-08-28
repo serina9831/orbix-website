@@ -1,15 +1,8 @@
-const items = [
-  'AGJENTË AI 24/7',
-  'WHATSAPP',
-  'INSTAGRAM',
-  'MESSENGER',
-  'REZERVIME AUTOMATIKE',
-  'ZERO KLIENTË TË HUMBUR',
-  'PËRGJIGJE NË SEKONDA',
-];
+import { useLang } from '../i18n';
 
 export const Marquee = () => {
-  const row = [...items, ...items];
+  const { t } = useLang();
+  const row = [...t.marquee, ...t.marquee];
   return (
     <div className="relative border-y border-white/5 bg-[#24282B] py-5 overflow-hidden" data-testid="editorial-marquee">
       <div className="flex whitespace-nowrap animate-marquee w-max">

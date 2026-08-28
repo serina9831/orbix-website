@@ -29,6 +29,7 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Domain final Vercel (Qershor 2026): https://orbix-website-eta.vercel.app — og:image/og:url, canonical, twitter:image, sitemap.xml, robots.txt, JSON-LD të gjitha të përditësuara me këtë domain
 - FAQ schema (Qershor 2026): JSON-LD FAQPage me 5 pyetjet në index.html për rich results në Google
 - Konfirmim pas dërgimit (Qershor 2026): Contact.jsx shfaq mesazh konfirmimi + link fallback wa.me nëse shfletuesi bllokon window.open
+- Faqe dygjuhëshe AL/EN (Qershor 2026): src/i18n.jsx (LangProvider + translations + GradientHeading helper); toggle AL/EN në navbar (desktop + mobile, testids: lang-btn-al/en, lang-btn-al/en-mobile); default AL, persiston në localStorage 'orbix-lang'; të gjitha seksionet + mesazhet WhatsApp ndryshojnë gjuhë; testuar nga testing_agent 100% (iteration_2)
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)

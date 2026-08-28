@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import '@/App.css';
 import { initLenis } from '@/lib/smooth';
+import { LangProvider } from '@/i18n';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Marquee } from '@/components/Marquee';
@@ -20,22 +21,24 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#1E2225] min-h-screen" data-testid="orbix-landing">
-      <Navbar />
-      <main>
-        <Hero />
-        <Marquee />
-        <DemoVideo />
-        <Services />
-        <HowItWorks />
-        <Niches />
-        <WhyOrbix />
-        <Faq />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+    <LangProvider>
+      <div className="bg-[#1E2225] min-h-screen" data-testid="orbix-landing">
+        <Navbar />
+        <main>
+          <Hero />
+          <Marquee />
+          <DemoVideo />
+          <Services />
+          <HowItWorks />
+          <Niches />
+          <WhyOrbix />
+          <Faq />
+          <Contact />
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+      </div>
+    </LangProvider>
   );
 }
 

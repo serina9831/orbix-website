@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { useLang } from '../i18n';
 
 const WA_NUMBER = '355696738308';
 
 export const WhatsAppFloat = () => {
   const [visible, setVisible] = useState(false);
+  const { t } = useLang();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 500);
@@ -18,10 +20,10 @@ export const WhatsAppFloat = () => {
     <AnimatePresence>
       {visible && (
         <motion.a
-          href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Përshëndetje ORBIX! Dua të mësoj më shumë për automatizimin me AI.')}`}
+          href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t.float.message)}`}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Na shkruaj në WhatsApp"
+          aria-label={t.float.aria}
           data-testid="whatsapp-float-btn"
           initial={{ opacity: 0, scale: 0.6, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

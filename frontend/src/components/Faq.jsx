@@ -2,29 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { Reveal, Chapter } from './Reveal';
-
-const faqs = [
-  {
-    q: 'Sa kushton një agjent AI për biznesin tim?',
-    a: 'Çmimi varet nga nevojat e biznesit tënd — sa kanale do të mbulohen, sa procese do të automatizohen dhe sa i personalizuar do të jetë sistemi. E diskutojmë hap pas hapi gjatë konsultës falas, pa asnjë detyrim.',
-  },
-  {
-    q: 'Sa kohë duhet për ta ndërtuar dhe lançuar sistemin?',
-    a: 'Zakonisht nga 1 deri në 3 javë, në varësi të kompleksitetit. Fillojmë me analizën e biznesit tënd, ndërtojmë agjentin, e testojmë bashkë dhe e lançojmë vetëm kur je plotësisht i kënaqur.',
-  },
-  {
-    q: 'A më duhet njohuri teknike për ta përdorur?',
-    a: 'Aspak. Ne e ndërtojmë, e lidhim dhe e mirëmbajmë gjithçka për ty. Ti thjesht sheh rezultatet — mesazhet e përgjigjura, takimet e rezervuara dhe panelin analitik të thjeshtë për t\'u lexuar.',
-  },
-  {
-    q: 'Në cilat kanale punon agjenti AI?',
-    a: 'Në kanalet ku klientët e tu tashmë të shkruajnë: WhatsApp, Instagram dhe Facebook Messenger. Agjenti përgjigjet aty në sekonda, 24 orë në ditë, 7 ditë në javë.',
-  },
-  {
-    q: 'Çfarë ndodh nëse agjenti nuk di të përgjigjet?',
-    a: 'Agjenti trajnohet me informacionin e biznesit tënd, dhe për raste të veçanta ta kalon bisedën ty ose stafit — kështu asnjë klient nuk mbetet pa përgjigje dhe asnjë pyetje delikate nuk trajtohet gabim.',
-  },
-];
+import { useLang, GradientHeading } from '../i18n';
 
 const FaqItem = ({ faq, index, open, onToggle }) => (
   <motion.div
@@ -67,21 +45,20 @@ const FaqItem = ({ faq, index, open, onToggle }) => (
 
 export const Faq = () => {
   const [openIndex, setOpenIndex] = useState(0);
+  const { t } = useLang();
 
   return (
     <section id="faq" className="relative py-24 lg:py-32" data-testid="faq-section">
       <div className="max-w-4xl mx-auto px-5 sm:px-8">
         <Reveal>
-          <Chapter number="06" label="Pyetje të Shpeshta" />
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-testid="faq-heading">
-            Pyetje që na bëjnë <span className="text-gradient-emerald">Shpesh</span>
-          </h2>
+          <Chapter number="06" label={t.faq.chapter} />
+          <GradientHeading part={t.faq} testid="faq-heading" />
         </Reveal>
 
         <div className="mt-12 space-y-4">
-          {faqs.map((faq, i) => (
+          {t.faq.items.map((faq, i) => (
             <FaqItem
-              key={faq.q}
+              key={i}
               faq={faq}
               index={i}
               open={openIndex === i}

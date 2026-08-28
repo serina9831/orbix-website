@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Play } from 'lucide-react';
 import { Reveal, Chapter } from './Reveal';
+import { useLang, GradientHeading } from '../i18n';
 
 const VIDEO_SRC = '/demo-video.mp4';
 
 export const DemoVideo = () => {
   const [hasVideo, setHasVideo] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const { t } = useLang();
 
   useEffect(() => {
     fetch(VIDEO_SRC, { method: 'HEAD' })
@@ -18,10 +20,8 @@ export const DemoVideo = () => {
     <section id="demo" className="relative py-24 lg:py-32" data-testid="demo-section">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <Reveal>
-          <Chapter number="01" label="Demo e Vërtetë" />
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-testid="demo-heading">
-            Shiko si Punon një Agjent AI <span className="text-gradient-emerald">i Vërtetë</span>
-          </h2>
+          <Chapter number="01" label={t.demo.chapter} />
+          <GradientHeading part={t.demo} testid="demo-heading" />
         </Reveal>
 
         <Reveal delay={0.15} className="mt-12">
@@ -44,12 +44,12 @@ export const DemoVideo = () => {
                 <button
                   className="relative pulse-ring w-20 h-20 rounded-full bg-gradient-to-br from-[#0F9D6E] to-[#1FBF7A] flex items-center justify-center shadow-[0_0_40px_rgba(31,191,122,0.45)]"
                   data-testid="demo-play-button"
-                  aria-label="Luaj videon"
+                  aria-label={t.demo.playLabel}
                 >
                   <Play size={30} className="text-white ml-1" fill="white" />
                 </button>
                 <p className="relative text-sm sm:text-base text-gray-400 max-w-md">
-                  Video demo po përgatitet — së shpejti do të shohësh këtu agjentin tonë AI duke punuar live.
+                  {t.demo.placeholder}
                 </p>
               </div>
             )}

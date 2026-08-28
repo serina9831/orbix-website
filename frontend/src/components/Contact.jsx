@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { Reveal, Chapter } from './Reveal';
+import { useLang, GradientHeading } from '../i18n';
 
 const WA_NUMBER = '355696738308';
 
@@ -16,19 +17,21 @@ const inputCls =
 export const Contact = () => {
   const [form, setForm] = useState({ name: '', business: '', phone: '', message: '' });
   const [sentUrl, setSentUrl] = useState(null);
+  const { t } = useLang();
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
   const onSubmit = (e) => {
     e.preventDefault();
+    const c = t.contact;
     const text = [
-      'Përshëndetje ORBIX!',
+      c.waGreeting,
       '',
-      `Emri: ${form.name}`,
-      `Biznesi: ${form.business}`,
-      `Telefoni: ${form.phone}`,
+      `${c.waName}: ${form.name}`,
+      `${c.waBusiness}: ${form.business}`,
+      `${c.waPhone}: ${form.phone}`,
       '',
-      `Mesazhi: ${form.message}`,
+      `${c.waMessage}: ${form.message}`,
     ].join('\n');
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
     setSentUrl(url);
@@ -41,14 +44,11 @@ export const Contact = () => {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
         <Reveal className="text-center max-w-2xl mx-auto">
           <div className="flex justify-center">
-            <Chapter number="07" label="Kontakt" />
+            <Chapter number="07" label={t.contact.chapter} />
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-testid="contact-heading">
-            Gati të Automatizosh Biznesin Tënd?{' '}
-            <span className="text-gradient-emerald">Na Kontakto Tani</span>
-          </h2>
+          <GradientHeading part={t.contact} testid="contact-heading" />
           <p className="mt-5 text-base sm:text-lg text-gray-400 leading-relaxed">
-            Shkruaji në WhatsApp për përgjigje të menjëhershme — ose plotëso formularin dhe biseda vazhdon direkt aty.
+            {t.contact.sub}
           </p>
         </Reveal>
 
@@ -61,7 +61,7 @@ export const Contact = () => {
             className="btn-glow inline-flex items-center gap-3 font-semibold text-white px-10 py-5 rounded-full text-base sm:text-lg"
           >
             <WhatsAppIcon size={22} />
-            Kontakto për një Konsultë
+            {t.contact.directBtn}
           </a>
         </Reveal>
 
@@ -72,14 +72,14 @@ export const Contact = () => {
             className="card-surface rounded-3xl p-7 sm:p-10 max-w-3xl mx-auto"
           >
             <p className="text-sm text-gray-500 mb-8 text-center uppercase tracking-[0.2em] font-semibold">
-              Ose plotëso formularin
+              {t.contact.formLabel}
             </p>
             <div className="grid sm:grid-cols-2 gap-5">
               <input
                 required
                 value={form.name}
                 onChange={set('name')}
-                placeholder="Emri"
+                placeholder={t.contact.phName}
                 data-testid="contact-input-name"
                 className={inputCls}
               />
@@ -87,7 +87,7 @@ export const Contact = () => {
                 required
                 value={form.business}
                 onChange={set('business')}
-                placeholder="Emri i Biznesit"
+                placeholder={t.contact.phBusiness}
                 data-testid="contact-input-business"
                 className={inputCls}
               />
@@ -95,7 +95,7 @@ export const Contact = () => {
                 required
                 value={form.phone}
                 onChange={set('phone')}
-                placeholder="Numri i Telefonit"
+                placeholder={t.contact.phPhone}
                 data-testid="contact-input-phone"
                 className={`${inputCls} sm:col-span-2`}
               />
@@ -103,7 +103,7 @@ export const Contact = () => {
                 required
                 value={form.message}
                 onChange={set('message')}
-                placeholder="Mesazhi"
+                placeholder={t.contact.phMessage}
                 rows={4}
                 data-testid="contact-input-message"
                 className={`${inputCls} sm:col-span-2 resize-none`}
@@ -115,15 +115,14 @@ export const Contact = () => {
               className="btn-glow mt-8 w-full inline-flex items-center justify-center gap-3 font-semibold text-white px-8 py-4 rounded-full text-sm sm:text-base"
             >
               <Send size={18} />
-              Dërgo në WhatsApp
+              {t.contact.submit}
             </button>
             {sentUrl && (
               <div
                 data-testid="contact-confirmation-message"
                 className="mt-6 rounded-2xl border border-[#1FBF7A]/35 bg-[#1FBF7A]/10 px-5 py-4 text-center text-sm sm:text-base text-gray-200"
               >
-                Mesazhi u përgatit dhe WhatsApp-i po hapet.{' '}
-                Nëse nuk u hap automatikisht,{' '}
+                {t.contact.confirmPre}
                 <a
                   href={sentUrl}
                   target="_blank"
@@ -131,9 +130,9 @@ export const Contact = () => {
                   data-testid="contact-confirmation-fallback-link"
                   className="text-[#1FBF7A] font-semibold underline underline-offset-4"
                 >
-                  kliko këtu për ta hapur
+                  {t.contact.confirmLink}
                 </a>
-                .
+                {t.contact.confirmPost}
               </div>
             )}
           </form>
