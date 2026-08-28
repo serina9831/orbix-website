@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#1A1D1E] min-h-screen" data-testid="orbix-landing">
+    <div className="bg-[#1E2225] min-h-screen" data-testid="orbix-landing">
       <Navbar />
       <main>
         <Hero />

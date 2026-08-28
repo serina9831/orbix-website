@@ -11,7 +11,7 @@ const WhatsAppIcon = ({ size = 20, className = '' }) => (
 );
 
 const inputCls =
-  'w-full bg-[#1A1D1E] border border-white/10 focus:border-[#1FBF7A]/60 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white placeholder-gray-500 outline-none transition-colors duration-300';
+  'w-full bg-[#1E2225] border border-white/10 focus:border-[#1FBF7A]/60 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white placeholder-gray-500 outline-none transition-colors duration-300';
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: '', business: '', phone: '', message: '' });
@@ -33,7 +33,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="relative py-24 lg:py-32 bg-[#212527] overflow-hidden" data-testid="contact-section">
+    <section id="kontakt" className="relative py-24 lg:py-32 bg-[#24282B] overflow-hidden" data-testid="contact-section">
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-[#1FBF7A]/8 blur-[140px]" />
       <div className="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
         <Reveal className="text-center max-w-2xl mx-auto">

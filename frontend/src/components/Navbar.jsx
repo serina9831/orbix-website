@@ -27,7 +27,7 @@ export const Navbar = () => {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-[#1A1D1E]/85 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
+        scrolled ? 'bg-[#1E2225]/85 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
       }`}
       data-testid="navbar"
     >
@@ -71,7 +71,7 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="md:hidden bg-[#1A1D1E]/97 backdrop-blur-xl border-t border-white/5 px-6 py-6 flex flex-col gap-5" data-testid="nav-mobile-menu">
+        <div className="md:hidden bg-[#1E2225]/97 backdrop-blur-xl border-t border-white/5 px-6 py-6 flex flex-col gap-5" data-testid="nav-mobile-menu">
           {links.map((l) => (
             <button
               key={l.hash}

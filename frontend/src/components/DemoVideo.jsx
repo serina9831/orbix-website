@@ -26,7 +26,7 @@ export const DemoVideo = () => {
 
         <Reveal delay={0.15} className="mt-12">
           <div
-            className="relative rounded-3xl overflow-hidden border border-[#1FBF7A]/25 shadow-[0_0_60px_rgba(31,191,122,0.12)] bg-[#212527]"
+            className="relative rounded-3xl overflow-hidden border border-[#1FBF7A]/25 shadow-[0_0_60px_rgba(31,191,122,0.12)] bg-[#24282B]"
             data-testid="demo-video-player"
           >
             {hasVideo ? (

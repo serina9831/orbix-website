@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #1A1D1E;
-  --bg-secondary: #212527;
-  --bg-card: #2B2F31;
+  --bg-primary: #1E2225;
+  --bg-secondary: #24282B;
+  --bg-card: #2A2E31;
   --emerald: #1FBF7A;
   --emerald-deep: #0F9D6E;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 .card-surface {
-  background: linear-gradient(160deg, #24282A 0%, #212527 100%);
+  background: linear-gradient(160deg, #2A2E31 0%, #282C2F 100%);
   border: 1px solid rgba(255, 255, 255, 0.07);
   transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
 }

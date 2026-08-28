@@ -49,7 +49,7 @@ const services = [
 ];
 
 export const Services = () => (
-  <section id="sherbimet" className="relative py-24 lg:py-32 bg-[#212527]" data-testid="services-section">
+  <section id="sherbimet" className="relative py-24 lg:py-32 bg-[#24282B]" data-testid="services-section">
     <div className="max-w-7xl mx-auto px-5 sm:px-8">
       <Reveal>
         <Chapter number="02" label="Shërbimet" />

@@ -12,7 +12,7 @@ const niches = [
 ];
 
 export const Niches = () => (
-  <section id="klientet" className="relative py-24 lg:py-32 bg-[#212527]" data-testid="niches-section">
+  <section id="klientet" className="relative py-24 lg:py-32 bg-[#24282B]" data-testid="niches-section">
     <div className="max-w-7xl mx-auto px-5 sm:px-8">
       <Reveal>
         <Chapter number="04" label="Për Ken Punojmë" />

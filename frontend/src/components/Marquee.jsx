@@ -11,7 +11,7 @@ const items = [
 export const Marquee = () => {
   const row = [...items, ...items];
   return (
-    <div className="relative border-y border-white/5 bg-[#212527] py-5 overflow-hidden" data-testid="editorial-marquee">
+    <div className="relative border-y border-white/5 bg-[#24282B] py-5 overflow-hidden" data-testid="editorial-marquee">
       <div className="flex whitespace-nowrap animate-marquee w-max">
         {[0, 1].map((half) => (
           <div key={half} className="flex items-center">

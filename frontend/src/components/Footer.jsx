@@ -7,7 +7,7 @@ const WhatsAppIcon = ({ size = 18, className = '' }) => (
 );
 
 export const Footer = () => (
-  <footer className="border-t border-white/5 bg-[#1A1D1E] py-14" data-testid="footer">
+  <footer className="border-t border-white/5 bg-[#1E2225] py-14" data-testid="footer">
     <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
       <span className="font-display text-2xl font-extrabold tracking-[0.25em] text-white" data-testid="footer-logo">
         ORBI<span className="text-gradient-emerald">X</span>

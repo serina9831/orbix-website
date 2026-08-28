@@ -23,6 +23,7 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - Butoni WhatsApp pluskues (Qershor 2026): WhatsAppFloat.jsx — shfaqet pas 500px scroll, wa.me/355696738308 me mesazh të paraplotësuar
 - SEO bazik (Qershor 2026): keywords shqip, canonical, sitemap.xml, robots.txt, JSON-LD Organization schema — URL-të absolute = preview URL, duhen përditësuar me domain të ri
 - FAQ seksion (Qershor 2026): Faq.jsx me 5 pyetje accordion (Chapter 06, Kontakt u bë 07); përgjigja e çmimit PA numër konkret sipas kërkesës — vetëm "varet nga nevojat, diskutohet në konsultën falas"
+- Palet e sfondit të përditësuara (Qershor 2026): body/primary #1A1D1E → #1E2225, seksionet dytësore #212527 → #24282B, kartat #2A2E31/#282C2F (më të çelëta për thellësi); përditësuar edhe theme-color e favicon.svg
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)
