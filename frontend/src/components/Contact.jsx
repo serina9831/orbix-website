@@ -38,7 +38,7 @@ export const Contact = () => {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
         <Reveal className="text-center max-w-2xl mx-auto">
           <div className="flex justify-center">
-            <Chapter number="06" label="Kontakt" />
+            <Chapter number="07" label="Kontakt" />
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-testid="contact-heading">
             Gati të Automatizosh Biznesin Tënd?{' '}

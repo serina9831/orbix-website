@@ -10,6 +10,7 @@ import { HowItWorks } from '@/components/HowItWorks';
 import { Niches } from '@/components/Niches';
 import { WhyOrbix } from '@/components/WhyOrbix';
 import { Contact } from '@/components/Contact';
+import { Faq } from '@/components/Faq';
 import { Footer } from '@/components/Footer';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 
@@ -29,6 +30,7 @@ function App() {
         <HowItWorks />
         <Niches />
         <WhyOrbix />
+        <Faq />
         <Contact />
       </main>
       <Footer />
