@@ -1,0 +1,37 @@
+{
+  "summary": "Frontend-only verification of the ORBIX static landing site after the ajv dependency fix. (1) Production build: `GENERATE_SOURCEMAP=false yarn build` (craco build) exited 0 with 'Compiled successfully.' in 35.9s — ZERO occurrences of 'Cannot find module ajv/dist/compile/codegen'. (2) package.json line 35 contains \"ajv\": \"^8.12.0\"; yarn.lock resolves ajv@^8.0.0/^8.12.0/^8.6.0/^8.9.0 to a single hoisted 8.20.0 and node_modules/ajv is 8.20.0 (no duplicate ajv6/ajv8 split), so Vercel's yarn install will reproduce the same tree. (3) Regression suite on REACT_APP_BACKEND_URL (https://ai-biznes-al.preview.emergentagent.com, HTTP 200): hero h1 renders 'Automatizo Biznesin Tënd me Inteligjencë Artificiale' with gradient span, FAQ accordion opens faq-answer-2 on click (and correctly collapses faq-answer-1), floating WhatsApp button is absent at scrollY=0 and appears after scrolling 1000px with href https://wa.me/355696738308?text=..., contact form builds and window.open()s https://wa.me/355696738308?text=...Emri%3A%20Test%20Emri...Biznesi...Telefoni...Mesazhi, empty submit correctly blocked by HTML5 required validation, direct WA CTA href = https://wa.me/355696738308, navbar CTA smooth-scrolls to contact (scrollY 6783), mobile (390x844) hamburger opens nav-mobile-menu. ZERO console errors and ZERO page errors across desktop and mobile. No backend testing performed (site is static, FastAPI unused, no DB/auth as instructed).",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Mobile 390x844 (whole page)",
+        "issues": [
+          "20px horizontal overflow (documentElement.scrollWidth=410 vs innerWidth=390) causing a slight horizontal scroll on mobile. Offenders: a decorative blur div 'pointer-events-none absolute -top-32 -right-40 w-[560px] h-[560px]' and the marquee container 'flex whitespace-nowrap animate-marquee w-max' whose parent sections lack overflow-x-hidden. Cosmetic only, no functional impact."
+        ]
+      }
+    ]
+  },
+  "test_report_links": [],
+  "action_items": [
+    "OPTIONAL (cosmetic): add overflow-hidden / overflow-x-clip to the section wrapping the '-right-40' decorative blur and to the Marquee container (or `overflow-x: hidden` on body) to remove the 20px mobile horizontal scroll."
+  ],
+  "critical_code_review_comments": [
+    "ajv fix is correctly implemented as a top-level dependency and de-duped in yarn.lock — keep yarn.lock committed so Vercel installs ajv 8.20.0 deterministically; do NOT switch Vercel to `npm install` as that can re-introduce the ajv/ajv-keywords mismatch.",
+    "Contact.jsx uses window.open() for the WhatsApp redirect; mobile popup blockers can silently suppress it. Consider assigning window.location.href (or rendering an <a target=_blank> and clicking it) as a fallback so no lead is lost.",
+    "Contact form has no post-submit feedback (no success/redirect state) — if window.open is blocked the user gets zero feedback. Low-effort improvement.",
+    "No files exceed size thresholds; all interactive elements carry data-testid; no hardcoded backend URLs (site is static by design)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A - no backend under test", "frontend": "100% (10/10 checks passed)"},
+  "seed_data_creation": "None required (static site, no DB)",
+  "should_call_test_agent_after_fix": false,
+  "should_main_agent_self_test": true,
+  "test_credentials": "None required — /app/memory/test_credentials.md not needed (no auth on this static site)",
+  "context_for_next_testing_agent": "Static Albanian landing page, no backend/DB. Verified build (exit 0, no ajv error), hero, FAQ accordion (faq-question-N/faq-answer-N), WhatsAppFloat (appears at scrollY>500), Contact form WhatsApp URL construction (stub window.open via page.evaluate before submitting to intercept the URL), navbar (uses <button> not <a>, so anchor-count assertions fail — use data-testid nav-* selectors), mobile menu. NOTE: hero h1 text is split across spans, so page.get_by_text('Automatizo Biznesin Tënd') times out — read h1.innerText via page.evaluate instead. Only open item: 20px mobile horizontal overflow.",
+  "rca_of_the_issue": "Original Vercel failure was react-scripts 5.0.1 -> ajv-keywords@5 requiring ajv@8 APIs (ajv/dist/compile/codegen) while the hoisted ajv resolved to v6. Adding an explicit top-level \"ajv\": \"^8.12.0\" forces yarn to hoist ajv 8.20.0, satisfying ajv-keywords@5. Confirmed fixed: yarn.lock has a single ajv 8.20.0 entry covering ^8.0.0/^8.6.0/^8.9.0/^8.12.0 and `yarn build` compiles successfully with exit code 0."
+}

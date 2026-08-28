@@ -24,6 +24,8 @@ One-page landing/portfolio site for ORBIX, an Albanian AI automation agency serv
 - SEO bazik (Qershor 2026): keywords shqip, canonical, sitemap.xml, robots.txt, JSON-LD Organization schema — URL-të absolute = preview URL, duhen përditësuar me domain të ri
 - FAQ seksion (Qershor 2026): Faq.jsx me 5 pyetje accordion (Chapter 06, Kontakt u bë 07); përgjigja e çmimit PA numër konkret sipas kërkesës — vetëm "varet nga nevojat, diskutohet në konsultën falas"
 - Palet e sfondit të përditësuara (Qershor 2026): body/primary #1A1D1E → #1E2225, seksionet dytësore #212527 → #24282B, kartat #2A2E31/#282C2F (më të çelëta për thellësi); përditësuar edhe theme-color e favicon.svg
+- Fix Vercel build (Qershor 2026): shtuar "ajv": "^8.12.0" në package.json (mismatch ajv-keywords/ajv me react-scripts); yarn build kalon me sukses (exit 0); verifikuar nga testing_agent 10/10; fix mobile overflow me overflow-x: clip në html
+- Butoni Hero: "Shiko Demoin" → "Shiko Demon" (Qershor 2026)
 - Contact form opens wa.me/355696738308 with pre-filled message (no DB storage)
 
 ## Implemented (2026-07/08 cycle, current build)
