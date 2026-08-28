@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: 'Syne'; src: url('file:///app/memory/fonts/syne-bold.ttf'); }
+  @font-face { font-family: 'Jakarta'; src: url('file:///app/memory/fonts/jakarta.ttf'); }
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Jakarta', sans-serif; background: #1E2225; color: #F4F6F8; width: 210mm; height: 297mm; }
+  .page { padding: 14mm 16mm 12mm; height: 297mm; display: flex; flex-direction: column; }
+  .logo { font-family: 'Syne'; font-weight: 800; font-size: 26pt; letter-spacing: 0.18em; color: #FFFFFF; }
+  .logo .x { color: #1FBF7A; }
+  .badge { display: inline-block; border: 1px solid rgba(31,191,122,0.4); border-radius: 20px; padding: 3pt 10pt; font-size: 7.5pt; letter-spacing: 0.22em; color: #1FBF7A; font-weight: 700; text-transform: uppercase; margin-top: 6pt; }
+  h1 { font-family: 'Syne'; font-weight: 800; font-size: 21pt; line-height: 1.15; margin-top: 12pt; color: #FFFFFF; }
+  h1 .em { color: #14B8A6; }
+  .sub { font-size: 10pt; color: #A8B0B6; margin-top: 6pt; line-height: 1.5; max-width: 150mm; }
+  .section-title { font-family: 'Syne'; font-weight: 700; font-size: 11pt; color: #1FBF7A; letter-spacing: 0.12em; text-transform: uppercase; margin: 14pt 0 8pt; }
+  .grid { display: flex; flex-wrap: wrap; gap: 6pt; }
+  .card { background: #2A2E31; border: 1px solid rgba(255,255,255,0.06); border-radius: 10pt; padding: 8pt 10pt; width: 86mm; }
+  .card h3 { font-family: 'Syne'; font-size: 9pt; color: #FFFFFF; margin-bottom: 3pt; }
+  .card p { font-size: 7.8pt; color: #A8B0B6; line-height: 1.45; }
+  .steps { display: flex; gap: 6pt; }
+  .step { background: #2A2E31; border: 1px solid rgba(31,191,122,0.22); border-radius: 10pt; padding: 8pt 9pt; flex: 1; }
+  .step .n { font-family: 'Syne'; font-size: 12pt; color: #1FBF7A; font-weight: 800; }
+  .step h3 { font-family: 'Syne'; font-size: 8.5pt; color: #FFFFFF; margin: 3pt 0 3pt; }
+  .step p { font-size: 7.2pt; color: #A8B0B6; line-height: 1.4; }
+  .why { display: flex; gap: 6pt; }
+  .why div { flex: 1; background: rgba(31,191,122,0.07); border-radius: 8pt; padding: 7pt 9pt; font-size: 8pt; color: #DDE3E7; line-height: 1.4; }
+  .why b { color: #1FBF7A; display: block; font-size: 8.5pt; margin-bottom: 2pt; }
+  .contact { margin-top: auto; background: linear-gradient(120deg, #0F9D6E, #1FBF7A); border-radius: 12pt; padding: 11pt 14pt; display: flex; justify-content: space-between; align-items: center; }
+  .contact .cta { font-family: 'Syne'; font-size: 12pt; font-weight: 800; color: #FFFFFF; }
+  .contact .info { text-align: right; font-size: 8.5pt; color: #FFFFFF; line-height: 1.6; }
+  .contact .info b { font-size: 9.5pt; }
+  .footer { text-align: center; font-size: 7pt; color: #6B7378; margin-top: 8pt; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div>
+    <span class="logo">ORBI<span class="x">X</span></span>
+    <div><span class="badge">Agjenci Automatizimi me AI</span></div>
+    <h1>Automatizo Biznesin Tënd me <span class="em">Inteligjencë Artificiale</span></h1>
+    <p class="sub">Agjentë AI që përgjigjen, rezervojnë dhe shesin për ty, 24 orë në ditë — pa e humbur asnjë klient. Demo reale, jo premtime.</p>
+  </div>
+
+  <div class="section-title">Çfarë Ofrojmë</div>
+  <div class="grid">
+    <div class="card"><h3>Agjent AI për WhatsApp, Instagram &amp; Messenger</h3><p>Çdo mesazh merr përgjigje brenda sekondash, ditë e natë — pa pushime, pa klientë të harruar.</p></div>
+    <div class="card"><h3>Rezervime Automatike të Takimeve</h3><p>Klienti rezervon vetë direkt në bisedë — kalendari yt përditësohet automatikisht në kohë reale.</p></div>
+    <div class="card"><h3>Mbledhje &amp; Kualifikim Leadesh</h3><p>Çdo i interesuar regjistrohet automatikisht me emër e numër — të dhënat gati për kontakt.</p></div>
+    <div class="card"><h3>Konfirmime &amp; Rikujtues Automatikë</h3><p>Më pak mungesa në takime dhe zero orë të humbura në telefonata kujtese.</p></div>
+    <div class="card"><h3>Panel Analitik për Performancën</h3><p>Takime, konfirmime dhe të ardhura — gjithçka e matur në kohë reale, asgjë me hamendje.</p></div>
+    <div class="card"><h3>Zgjidhje 100% e Personalizuar</h3><p>Ndërtohet nga e para për biznesin tënd — flet si ti, njeh shërbimet e tua, s'është shabllon.</p></div>
+  </div>
+
+  <div class="section-title">Si Funksionon Bashkëpunimi</div>
+  <div class="steps">
+    <div class="step"><span class="n">01</span><h3>Konsultë Falas</h3><p>Kuptojmë nevojat e biznesit tënd — ku humbet kohë, ku ikin klientët.</p></div>
+    <div class="step"><span class="n">02</span><h3>Ndërtimi i Agjentit</h3><p>Agjent AI i personalizuar për shërbimet, çmimet dhe stilin tënd.</p></div>
+    <div class="step"><span class="n">03</span><h3>Integrimi në Kanale</h3><p>WhatsApp, Instagram e Messenger — aty ku klientët tashmë shkruajnë.</p></div>
+    <div class="step"><span class="n">04</span><h3>Lançimi &amp; Optimizimi</h3><p>E vëmë në punë dhe e përmirësojmë bazuar në rezultate reale.</p></div>
+  </div>
+
+  <div class="section-title">Pse ORBIX</div>
+  <div class="why">
+    <div><b>Demo Reale, Jo Premtime</b>Sheh me sytë e tu çfarë po blen, para se të vendosësh.</div>
+    <div><b>E Personalizuar, Jo Shabllon</b>Çdo zgjidhje ndërtohet rreth proceseve dhe zërit tënd.</div>
+    <div><b>Transparencë e Plotë</b>Çdo rezultat matet e shihet në panelin analitik.</div>
+  </div>
+
+  <div class="contact">
+    <span class="cta">Gati për një Konsultë Falas?</span>
+    <div class="info">
+      <b>+355 69 673 8308</b> (WhatsApp)<br>
+      orbixagency.info@gmail.com<br>
+      orbix-website-eta.vercel.app &nbsp;•&nbsp; @orbix.agency
+    </div>
+  </div>
+  <p class="footer">© 2026 ORBIX — Agjenci Automatizimi me AI. Të gjitha të drejtat e rezervuara.</p>
+</div>
+</body>
+</html>
