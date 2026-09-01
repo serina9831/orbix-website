@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://orbix-website-eta.vercel.app/sitemap.xml
+Sitemap: https://orbixagency.net/sitemap.xml
