@@ -64,7 +64,7 @@ export const Pricing = () => {
                   {plan.addon}
                 </div>
 
-                
+                <a
                   href={waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
