@@ -7,6 +7,7 @@ import { Hero } from '@/components/Hero';
 import { Marquee } from '@/components/Marquee';
 import { DemoVideo } from '@/components/DemoVideo';
 import { Services } from '@/components/Services';
+import { Pricing } from '@/components/Pricing';
 import { HowItWorks } from '@/components/HowItWorks';
 import { Niches } from '@/components/Niches';
 import { WhyOrbix } from '@/components/WhyOrbix';
@@ -29,6 +30,7 @@ function App() {
           <Marquee />
           <DemoVideo />
           <Services />
+          <Pricing />
           <HowItWorks />
           <Niches />
           <WhyOrbix />
