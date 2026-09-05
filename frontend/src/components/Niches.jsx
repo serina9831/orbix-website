@@ -18,7 +18,7 @@ export const Niches = () => {
     <section id="klientet" className="relative py-24 lg:py-32 bg-[#24282B]" data-testid="niches-section">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <Reveal>
-          <Chapter number="04" label={t.niches.chapter} />
+          <Chapter number="05" label={t.niches.chapter} />
           <GradientHeading part={t.niches} testid="niches-heading" />
         </Reveal>
 
