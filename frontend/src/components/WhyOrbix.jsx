@@ -10,7 +10,7 @@ export const WhyOrbix = () => {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
           <Reveal className="lg:sticky lg:top-28">
-            <Chapter number="05" label={t.why.chapter} />
+            <Chapter number="06" label={t.why.chapter} />
             <GradientHeading part={t.why} testid="why-orbix-heading" />
             <p className="mt-5 text-base sm:text-lg text-gray-400 leading-relaxed max-w-md">
               {t.why.sub}
