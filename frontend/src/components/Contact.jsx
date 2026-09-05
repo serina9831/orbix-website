@@ -44,7 +44,7 @@ export const Contact = () => {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
         <Reveal className="text-center max-w-2xl mx-auto">
           <div className="flex justify-center">
-            <Chapter number="07" label={t.contact.chapter} />
+            <Chapter number="08" label={t.contact.chapter} />
           </div>
           <GradientHeading part={t.contact} testid="contact-heading" />
           <p className="mt-5 text-base sm:text-lg text-gray-400 leading-relaxed">
