@@ -51,7 +51,7 @@ export const Faq = () => {
     <section id="faq" className="relative py-24 lg:py-32" data-testid="faq-section">
       <div className="max-w-4xl mx-auto px-5 sm:px-8">
         <Reveal>
-          <Chapter number="06" label={t.faq.chapter} />
+          <Chapter number="07" label={t.faq.chapter} />
           <GradientHeading part={t.faq} testid="faq-heading" />
         </Reveal>
 
