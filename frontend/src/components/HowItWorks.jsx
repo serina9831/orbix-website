@@ -10,7 +10,7 @@ export const HowItWorks = () => {
     <section id="procesi" className="relative py-24 lg:py-32" data-testid="how-it-works-section">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <Reveal>
-          <Chapter number="03" label={t.how.chapter} />
+          <Chapter number="04" label={t.how.chapter} />
           <GradientHeading part={t.how} testid="how-it-works-heading" />
         </Reveal>
 
